@@ -29,3 +29,251 @@ Feature: Koala Palace
     And kullanici hotelroomcreate maxchildren bolumune "3" girer
     And kullanici hotelroomcreate save butonuna tiklar
     Then kullanici hotelroomcreate kayit islemini assert eder
+  @hotelreservationcreate
+  Scenario: TC11_kullanici bilgileri girerek room reservation olusturur
+    Given kullanici hotelroomreservation sayfasina gider
+    And kullanici roomreservation iduser bolumunde "manager2" secer
+    And kullanici roomreservation idhotelroom bolumunde "Hilton" secer
+    And kullanici roomreservation price bolumune "500" girer
+    And kullanici roomreservation datestart bolumune "10/10/2020" girer
+    And kullanici roomreservation dateend bolumune "10/17/2020" girer
+    And kullanici roomreservation adultamaount bolumune "2" girer
+    And kullanici roomreservation childrenamount bolumune "3" girer
+    And kullanici roomreservation namesurname bolumune "Hamza Yılmaz" girer
+    And kullanici roomreservation phone bolumune "0500600700" girer
+    And kullanici roomreservation email bolumune "hamza@gmail.com" girer
+    And kullanici roomreservation notes bolumune "Testerlardan selam.." girer
+    And kullanici roomreservation save butonuna tiklar
+    Then kullanici roomreservation kayit islemini assert eder
+  @hotelreservationcreate
+  @hotelreservationnegativetests
+  @hotelreservationnegativetest1
+  Scenario: TC12_kullanici iduser secmeden room reservation olusturur
+    Given kullanici hotelroomreservation sayfasina gider
+    #Bu adımı sildim : And kullanici roomreservation iduser bolumunde "manager2" secer
+    And kullanici roomreservation idhotelroom bolumunde "Hilton" secer
+    And kullanici roomreservation price bolumune "500" girer
+    And kullanici roomreservation datestart bolumune "10/10/2020" girer
+    And kullanici roomreservation dateend bolumune "10/17/2020" girer
+    And kullanici roomreservation adultamaount bolumune "2" girer
+    And kullanici roomreservation childrenamount bolumune "3" girer
+    And kullanici roomreservation namesurname bolumune "Hamza Yılmaz" girer
+    And kullanici roomreservation phone bolumune "0500600700" girer
+    And kullanici roomreservation email bolumune "hamza@gmail.com" girer
+    And kullanici roomreservation notes bolumune "Testerlardan selam.." girer
+    And kullanici roomreservation save butonuna tiklar
+    Then kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder
+  @hotelreservationcreate
+  @hotelreservationnegativetests
+  @hotelreservationnegativetest2
+  Scenario: TC12_kullanici iduser secmeden room reservation olusturur
+    Given kullanici hotelroomreservation sayfasina gider
+    And kullanici roomreservation iduser bolumunde "manager2" secer
+    #Bu adımı sildim : And kullanici roomreservation idhotelroom bolumunde "Hilton" secer
+    And kullanici roomreservation price bolumune "500" girer
+    And kullanici roomreservation datestart bolumune "10/10/2020" girer
+    And kullanici roomreservation dateend bolumune "10/17/2020" girer
+    And kullanici roomreservation adultamaount bolumune "2" girer
+    And kullanici roomreservation childrenamount bolumune "3" girer
+    And kullanici roomreservation namesurname bolumune "Hamza Yılmaz" girer
+    And kullanici roomreservation phone bolumune "0500600700" girer
+    And kullanici roomreservation email bolumune "hamza@gmail.com" girer
+    And kullanici roomreservation notes bolumune "Testerlardan selam.." girer
+    And kullanici roomreservation save butonuna tiklar
+    Then kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder
+  @hotelreservationcreate
+  @hotelreservationnegativetests
+  @hotelreservationnegativetest3
+  Scenario: TC12_kullanici iduser secmeden room reservation olusturur
+    Given kullanici hotelroomreservation sayfasina gider
+    And kullanici roomreservation iduser bolumunde "manager2" secer
+    And kullanici roomreservation idhotelroom bolumunde "Hilton" secer
+    #Bu adımı sildim : And kullanici roomreservation price bolumune "500" girer
+    And kullanici roomreservation datestart bolumune "10/10/2020" girer
+    And kullanici roomreservation dateend bolumune "10/17/2020" girer
+    And kullanici roomreservation adultamaount bolumune "2" girer
+    And kullanici roomreservation childrenamount bolumune "3" girer
+    And kullanici roomreservation namesurname bolumune "Hamza Yılmaz" girer
+    And kullanici roomreservation phone bolumune "0500600700" girer
+    And kullanici roomreservation email bolumune "hamza@gmail.com" girer
+    And kullanici roomreservation notes bolumune "Testerlardan selam.." girer
+    And kullanici roomreservation save butonuna tiklar
+    Then kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder
+  @hotelreservationcreate
+  @hotelreservationnegativetests
+  @hotelreservationnegativetest4
+  Scenario: TC12_kullanici iduser secmeden room reservation olusturur
+    Given kullanici hotelroomreservation sayfasina gider
+    And kullanici roomreservation iduser bolumunde "manager2" secer
+    And kullanici roomreservation idhotelroom bolumunde "Hilton" secer
+    And kullanici roomreservation price bolumune "500" girer
+    #Bu adımı sildim : And kullanici roomreservation datestart bolumune "10/10/2020" girer
+    And kullanici roomreservation dateend bolumune "10/17/2020" girer
+    And kullanici roomreservation adultamaount bolumune "2" girer
+    And kullanici roomreservation childrenamount bolumune "3" girer
+    And kullanici roomreservation namesurname bolumune "Hamza Yılmaz" girer
+    And kullanici roomreservation phone bolumune "0500600700" girer
+    And kullanici roomreservation email bolumune "hamza@gmail.com" girer
+    And kullanici roomreservation notes bolumune "Testerlardan selam.." girer
+    And kullanici roomreservation save butonuna tiklar
+    Then kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder
+  @hotelreservationcreate
+  @hotelreservationnegativetests
+  @hotelreservationnegativetest5
+  Scenario: TC12_kullanici iduser secmeden room reservation olusturur
+    Given kullanici hotelroomreservation sayfasina gider
+    And kullanici roomreservation iduser bolumunde "manager2" secer
+    And kullanici roomreservation idhotelroom bolumunde "Hilton" secer
+    And kullanici roomreservation price bolumune "500" girer
+    And kullanici roomreservation datestart bolumune "10/10/2020" girer
+    #Bu adımı sildim : And kullanici roomreservation dateend bolumune "10/17/2020" girer
+    And kullanici roomreservation adultamaount bolumune "2" girer
+    And kullanici roomreservation childrenamount bolumune "3" girer
+    And kullanici roomreservation namesurname bolumune "Hamza Yılmaz" girer
+    And kullanici roomreservation phone bolumune "0500600700" girer
+    And kullanici roomreservation email bolumune "hamza@gmail.com" girer
+    And kullanici roomreservation notes bolumune "Testerlardan selam.." girer
+    And kullanici roomreservation save butonuna tiklar
+    Then kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder
+  @hotelreservationcreate
+  @hotelreservationnegativetests
+  @hotelreservationnegativetest6
+  Scenario: TC12_kullanici iduser secmeden room reservation olusturur
+    Given kullanici hotelroomreservation sayfasina gider
+    And kullanici roomreservation iduser bolumunde "manager2" secer
+    And kullanici roomreservation idhotelroom bolumunde "Hilton" secer
+    And kullanici roomreservation price bolumune "500" girer
+    And kullanici roomreservation datestart bolumune "10/10/2020" girer
+    And kullanici roomreservation dateend bolumune "10/17/2020" girer
+    #Bu adımı sildim : And kullanici roomreservation adultamaount bolumune "2" girer
+    And kullanici roomreservation childrenamount bolumune "3" girer
+    And kullanici roomreservation namesurname bolumune "Hamza Yılmaz" girer
+    And kullanici roomreservation phone bolumune "0500600700" girer
+    And kullanici roomreservation email bolumune "hamza@gmail.com" girer
+    And kullanici roomreservation notes bolumune "Testerlardan selam.." girer
+    And kullanici roomreservation save butonuna tiklar
+    Then kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder
+  @hotelreservationcreate
+  @hotelreservationnegativetests
+  @hotelreservationnegativetest7
+  Scenario: TC12_kullanici iduser secmeden room reservation olusturur
+    Given kullanici hotelroomreservation sayfasina gider
+    And kullanici roomreservation iduser bolumunde "manager2" secer
+    And kullanici roomreservation idhotelroom bolumunde "Hilton" secer
+    And kullanici roomreservation price bolumune "500" girer
+    And kullanici roomreservation datestart bolumune "10/10/2020" girer
+    And kullanici roomreservation dateend bolumune "10/17/2020" girer
+    And kullanici roomreservation adultamaount bolumune "2" girer
+    #Bu adımı sildim : And kullanici roomreservation childrenamount bolumune "3" girer
+    And kullanici roomreservation namesurname bolumune "Hamza Yılmaz" girer
+    And kullanici roomreservation phone bolumune "0500600700" girer
+    And kullanici roomreservation email bolumune "hamza@gmail.com" girer
+    And kullanici roomreservation notes bolumune "Testerlardan selam.." girer
+    And kullanici roomreservation save butonuna tiklar
+    Then kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder
+  @hotelreservationcreate
+  @hotelreservationnegativetests
+  @hotelreservationnegativetest8
+  Scenario: TC12_kullanici iduser secmeden room reservation olusturur
+    Given kullanici hotelroomreservation sayfasina gider
+    And kullanici roomreservation iduser bolumunde "manager2" secer
+    And kullanici roomreservation idhotelroom bolumunde "Hilton" secer
+    And kullanici roomreservation price bolumune "500" girer
+    And kullanici roomreservation datestart bolumune "10/10/2020" girer
+    And kullanici roomreservation dateend bolumune "10/17/2020" girer
+    And kullanici roomreservation adultamaount bolumune "2" girer
+    And kullanici roomreservation childrenamount bolumune "3" girer
+    #Bu adımı sildim : And kullanici roomreservation namesurname bolumune "Hamza Yılmaz" girer
+    And kullanici roomreservation phone bolumune "0500600700" girer
+    And kullanici roomreservation email bolumune "hamza@gmail.com" girer
+    And kullanici roomreservation notes bolumune "Testerlardan selam.." girer
+    And kullanici roomreservation save butonuna tiklar
+    Then kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder
+  @hotelreservationcreate
+  @hotelreservationnegativetests
+  @hotelreservationnegativetest9
+  Scenario: TC12_kullanici iduser secmeden room reservation olusturur
+    Given kullanici hotelroomreservation sayfasina gider
+    And kullanici roomreservation iduser bolumunde "manager2" secer
+    And kullanici roomreservation idhotelroom bolumunde "Hilton" secer
+    And kullanici roomreservation price bolumune "500" girer
+    And kullanici roomreservation datestart bolumune "10/10/2020" girer
+    And kullanici roomreservation dateend bolumune "10/17/2020" girer
+    And kullanici roomreservation adultamaount bolumune "2" girer
+    And kullanici roomreservation childrenamount bolumune "3" girer
+    And kullanici roomreservation namesurname bolumune "Hamza Yılmaz" girer
+    #Bu adımı sildim : And kullanici roomreservation phone bolumune "0500600700" girer
+    And kullanici roomreservation email bolumune "hamza@gmail.com" girer
+    And kullanici roomreservation notes bolumune "Testerlardan selam.." girer
+    And kullanici roomreservation save butonuna tiklar
+    Then kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder
+  @hotelreservationcreate
+  @hotelreservationnegativetests
+  @hotelreservationnegativetest10
+  Scenario: TC12_kullanici iduser secmeden room reservation olusturur
+    Given kullanici hotelroomreservation sayfasina gider
+    And kullanici roomreservation iduser bolumunde "manager2" secer
+    And kullanici roomreservation idhotelroom bolumunde "Hilton" secer
+    And kullanici roomreservation price bolumune "500" girer
+    And kullanici roomreservation datestart bolumune "10/10/2020" girer
+    And kullanici roomreservation dateend bolumune "10/17/2020" girer
+    And kullanici roomreservation adultamaount bolumune "2" girer
+    And kullanici roomreservation childrenamount bolumune "3" girer
+    And kullanici roomreservation namesurname bolumune "Hamza Yılmaz" girer
+    And kullanici roomreservation phone bolumune "0500600700" girer
+    #Bu adımı sildim : And kullanici roomreservation email bolumune "hamza@gmail.com" girer
+    And kullanici roomreservation notes bolumune "Testerlardan selam.." girer
+    And kullanici roomreservation save butonuna tiklar
+    Then kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder
+
+  @hotelreservationcreate
+  @hotelreservationnegativetests
+  @hotelreservationnegativetest11
+  Scenario: TC22_kullanici email secmeden room reservation olusturur
+    Given kullanici hotelroomreservation sayfasina gider
+    And kullanici roomreservation iduser bolumunde "manager2" secer
+    And kullanici roomreservation idhotelroom bolumunde "Hilton" secer
+    And kullanici roomreservation price bolumune "500" girer
+    And kullanici roomreservation datestart bolumune "10/30/2020" girer
+    And kullanici roomreservation dateend bolumune "10/5/2020" girer
+    And kullanici roomreservation adultamaount bolumune "2" girer
+    And kullanici roomreservation childrenamount bolumune "3" girer
+    And kullanici roomreservation namesurname bolumune "Hamza Yılmaz" girer
+    And kullanici roomreservation phone bolumune "0500600700" girer
+    And kullanici roomreservation email bolumune "hamza@gmail.com" girer
+    And kullanici roomreservation notes bolumune "Testerlardan selam.." girer
+    And kullanici roomreservation save butonuna tiklar
+    Then kullanici roomreservation kayit isleminin basarisiz oldugunu assert eder
+
+  @hotelsearch
+  Scenario: TC23_kullanici hotellist sayfasinda code girerek hotel arar
+    Given kullanici hotellist sayfasina gider
+    And kullanici hotellist code bolumune "1234" girer
+    And kullanici hotellist search butonuna tiklar
+    Then kullanici hotellist bolumunundeki kayitlari inceler
+
+  @hotelroomsearch
+  Scenario: TC24_kullanici hotelroomlist sayfasinda verileri girerek hotelroom arar
+    Given kullanici hotelroomlist sayfasina gider
+    And kullanici hotelroomlist idhotelbolumunde "Star" secer
+    And kullanici hotelroomlist code bolumune "12345" girer
+    And kullanici hotelroomlist name bolumune "Techproed" girer
+    And kullanici hotelroomlist location bolumune "USA" girer
+    And kullanici hotelroomlist search butonuna tiklar
+    Then kullanici hotelroomlist bolumundeki kayitlari inceler
+
+  @hotelsearchnegative01
+  Scenario: TC25_kullanici hotellist sayfasinda code girerek hotel arar
+    Given kullanici hotellist sayfasina gider
+    And kullanici hotellist code bolumune "-10" girer
+    And kullanici hotellist search butonuna tiklar
+    Then kullanici hotellist sonuc bolumunde kayit bulunamadi yazisini gorur
+
+
+  @hotelreservationsearch
+  Scenario: TC26_kullanici hotelreservationlist sayfasinda verileri girerek reservation arar
+    Given kullanici hotelroomreservationlist sayfasina gider
+    And kullanici hotelroomreservationlist hotelroomid bolumunde "team06" secer
+    And kullanici hotelroomreservationlist arama kutusuna tiklar
+    Then kullanici hotelroomreservationlist kayitlarini inceler
+
